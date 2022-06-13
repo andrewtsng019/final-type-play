@@ -1,0 +1,520 @@
+<html>
+
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;500;700&display=swap"
+		rel="stylesheet">
+
+	<style>
+		* {
+			justify-content: left;
+			align-items: left;
+			flex-wrap: wrap;
+		}
+
+		h1 {
+			font-family: 'Noto sans TC';
+			font-size: 34px;
+			font-weight: 700;
+			letter-spacing: 3px;
+			color: #657256;
+			display: inline-block;
+		}
+
+		h2 {
+			font-family: 'Noto sans TC';
+			font-size: 24px;
+			font-weight: 500;
+			letter-spacing: 1.5px;
+			color: #657256;
+			display: inline-block;
+		}
+
+		h6 {
+			font-family: 'Inter';
+			font-style: normal;
+			font-weight: 700;
+			font-size: 20px;
+			line-height: 24px;
+			text-align: center;
+
+			color: #657256;
+
+		}
+
+		h7 {
+			font-family: 'Inter';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 20px;
+			line-height: 24px;
+
+			color: #978E8E;
+		}
+
+		p {
+			font-family: 'Noto sans TC';
+			font-size: 22px;
+			font-weight: 400;
+			color: darkslategray;
+			display: inline-block;
+		}
+
+		.desktop-block {
+			width: 100%;
+			background-color: #FEFAE0;
+		}
+
+		#header {
+			background-color: #F0E8B6;
+			width: auto;
+			height: 80px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-left: 40px;
+			padding-right: 160px;
+			display: flex;
+			align-items: center;
+		}
+
+
+		#header img {
+			width: 70px;
+			height: 70px;
+		}
+
+
+		.tab {
+			font-size: 20px;
+			line-height: 24px;
+			color: #425828;
+		}
+
+		.quote {
+			position: absolute;
+			top: 320px;
+			left: 690px;
+			width: 470px;
+			color: #4A4949;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 29px;
+		}
+
+		.divide-line {
+			width: 475px;
+			height: 0.5px;
+			background-color: #404040;
+			margin-top: 30px;
+			position: relative;
+
+		}
+
+		.title {
+			width: 140px;
+			color: #425828;
+			font-weight: 700;
+			font-size: 34px;
+			line-height: 29px;
+			margin-top: 40px;
+			position: relative;
+
+		}
+
+		.wheel {
+			display: flex;
+			margin-left: 270px;
+			margin-top: 40px;
+			max-width: 340px;
+			margin-right: 0px;
+
+		}
+
+		.rotate {
+			animation: rotation 2s infinite linear;
+		}
+
+		@keyframes rotation {
+			from {
+				transform: rotate(0deg);
+			}
+
+			to {
+				transform: rotate(359deg);
+			}
+		}
+
+		.all-article {
+			display: flex;
+			justify-content: center;
+			padding-top: 60px;
+
+		}
+
+		.qt-btn {
+			height: 50px;
+			width: 150px;
+			background-color: #df5f5f;
+			color: #ffffff;
+			border-radius: 300px 300px 300px 300px;
+			vertical-align: center;
+			text-align: center;
+			font-weight: 500;
+			font-size: 26px;
+			padding-top: 11px;
+			text-decoration: none;
+			margin: 50px auto 0 0;
+		}
+
+		a{
+			text-decoration: none;
+			color:#ffffff
+		}
+
+
+		.b {
+			position: absolute;
+			width: 90px;
+			height: 36px;
+			background: #be8888;
+			border-radius: 30px;
+
+
+			font-style: normal;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 19px;
+			text-align: center;
+
+
+			color: #262626;
+		}
+
+		.modal-header {
+			position: relative;
+			max-height: 170px;
+			max-width: 420px;
+			margin: 30 40 70 40;
+			padding-top: 20px;
+			flex-direction: row;
+			justify-content: center;
+			border-bottom: none;
+
+		}
+
+		.modal-header img {
+
+			width: 420px;
+			height: 170px;
+			object-fit: fill;
+			display: flex;
+			margin-top: 10px;
+		}
+
+		.modal-content {
+			background-color: rgba(254, 250, 224);
+			height: 530px;
+		}
+
+		.modal-body {
+			vertical-align: middle;
+			display: flex;
+			flex-direction: row;
+			margin-top: 10;
+			margin-bottom: 10;
+			margin-left: 40;
+			margin-right: 40;
+
+		}
+
+		.type {
+			padding-bottom: 30px;
+			background-color: rgba(254, 250, 224);
+			width: 100%;
+		}
+
+		.footer {
+			height: 180px;
+			width: 100%;
+			background-color: #f0e8b6;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			font-size: 34px;
+			color: #657256;
+			padding-top: 10px;
+			padding-bottom: auto;
+
+		}
+
+
+		.footer img {
+			object-fit: cover;
+			max-width: 144px;
+			max-height: 150px;
+		}
+
+		.credit {
+			height: 160px;
+			width: auto;
+			margin-left: 170px;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap-reverse;
+			border-left: 2px solid darkgray;
+			padding-left: 20px;
+		}
+
+
+		.daddy {
+			position: relative;
+			height: 360px;
+			width: 540px;
+			margin-left: 70px;
+			margin: 80 0 40 170;
+			background-color: #ffffff;
+			display: flex;
+			flex-direction: row;
+
+		}
+
+		.son {
+			position: absolute;
+			width: 560px;
+			height: 275px;
+			left: 540px;
+			top: 30px;
+			padding-left: 30px;
+			padding-right: 30px;
+			padding-top: 25px;
+			background-color: #ffffff;
+			vertical-align: middle;
+			display: flex;
+			flex-direction: row;
+
+		}
+
+		.daddy img {
+			max-width: 540px;
+			max-height: 360px;
+			object-fit: cover;
+			display: flex;
+		}
+
+		.img-box {
+			background-color: rgba(203, 134, 134, 0.3);
+			height: 360px;
+			width: 540px;
+			position: absolute;
+			left: 0px;
+			display: flex;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="desktop-block">
+		<div id="header">
+			<div>
+				<img src="./assets/icon/Logo-noname.png">
+			</div>
+			<div class="tab">
+				・帶你去玩
+			</div>
+			<div class="tab">
+				・帶你去吃
+			</div>
+			<div class="tab">
+				・帶你去看
+			</div>
+
+		</div>
+
+		<div style="width: auto;height: 150px;"></div>
+
+		<div class="wheel">
+			<img src="./assets/icon/wheel-watch.png" class="rotate" max-width="340px" height="340px">
+		</div>
+
+		<div class="quote">
+			「看」的真正意義，即開拓一種新的解讀事物的方式，讓人從不同角度去領略原以為認識的物件、時代與人之間的交互作用。
+
+			<div class="divide-line"></div>
+
+			<div class="qt-btn">
+			<a href="#" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">帶你去看</a>
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- 跳出視窗內容 -->
+
+	<div class="modal fade" id="loginModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<!-- Header -->
+				<div class="modal-header">
+					<h1>你轉到了...</h1>
+					<img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/fotojet-2-1640004462.jpg?crop=1.00xw:1.00xh;0,0&resize=980:*">
+				</div>
+
+				<div class="modal-body">
+
+					<h6>《光》特展5大亮點：當年的摩登女孩、重建臺灣百年藝術史</h6>
+					<h7>《光》將於高雄市立美術館盛大開展，邀請南臺灣民眾親炙黃土水雕塑作品〈甘露水〉，共同見證藝文界的百年脈動！</h7>
+
+					<div type="button" class="btn-close" data-bs-dismiss="modal" style="position:absolute;
+					width: 90px;
+					height: 30px;
+					bottom:10px;
+					right:85px;
+					background:grey;
+					border-radius: 30px;
+					font-weight: 400;
+					font-size: 18px;
+					text-align: center;
+					padding-top:4.5px;
+					vertical-align: center;
+					margin-left: 80px;
+					">
+						看其他
+					</div>
+					<div style="
+					position:absolute;
+					width: 110px;
+					height: 36px;
+					bottom:10px;
+					left:85px;
+					background-color:#be8888;
+					border-radius: 30px;
+					font-weight: 400;
+					font-size: 18px;
+					text-align: center;
+					padding:3px;
+					vertical-align: center;">
+						馬上看
+					</div>
+
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+
+	</div>
+	</div>
+
+	<div class="type">
+
+		<div class="all-article">
+			<h1>所有文章</h1>
+		</div>
+
+		<div class="daddy">
+			<div class="img-box">
+			</div>
+			<img
+			src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/%E6%9C%AC%E6%AC%A1%E8%AB%96%E5%A3%87%E6%B4%BB%E5%8B%95%E6%96%BCpark2%E4%B8%80%E6%A8%93%E5%8C%85%E5%A0%B4%E8%88%89%E8%BE%A6-b1%E5%A0%B4%E5%9F%9F%E4%B9%9F%E6%9C%83%E6%9C%89%E7%8F%BE%E5%A0%B4%E7%9A%84%E5%85%8D%E8%B2%BB%E8%BD%89%E6%92%AD-%E5%9C%96-park2%E8%8D%89%E6%82%9F%E5%BB%A3%E5%A0%B4%E6%8F%90%E4%BE%9B-1-1650633164.jpg?crop=1.00xw:0.753xh;0,0.239xh&resize=980:*">
+			<div>
+
+			</div>
+			<div class="son">
+				<h2>設計師交流之夜，年度最酷創意論壇，只限一晚！</h2>
+			<p>集結方序中等10位台北、台中設計、文化藝術界的重磅講者，以「20X20」的超級濃縮演講形式，以開放的露天形式在PARK2，輪番上陣分享！</p>
+			</div>
+		</div>
+		<div class="daddy">
+			<div class="img-box">
+
+			</div>
+			<img
+				src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/unknown-1654678749.jpeg?crop=1.00xw:1.00xh;0,0&resize=980:*">	
+				<div>
+
+			</div>
+			<div class="son">
+				<h2>讓藝術品取悅你！plzzzz藝廊首展《Please, Please Me》</h2>
+				<p>匯流當代與潮流藝術的plzzzz，標誌著當代藝術、潮流文化與數位創作的融合，致力於宣揚新世代的語彙，提供大眾全新的生活美學體驗。</p>
+			</div>
+		</div>
+
+		<div class="daddy">
+			<div class="img-box">
+
+			</div>
+			<img
+				src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/%E5%85%A8%E7%B8%A3%E6%8F%9B%E5%88%97%E8%BB%8A-1650357471.jpg?crop=0.848xw:1.00xh;0.0377xw,0&resize=980:*">
+			<div>
+
+			</div>
+			<div class="son">
+				<h2>高鐵攜手藝術家，推出「寶島隨身聽」！</h2>
+				<p>曾結合藝術來探索飲食失調、厭食症的現象，到最近設計能量大爆發的2021文博會，以生猛有力的跨飲食文化展演的「愛ㄉ合作社」，重擊人們的心</p>
+			</div>
+
+		</div>
+
+		<div class="daddy">
+			<div class="img-box">
+
+			</div>
+			<img
+				src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/fotojet-2-1640004462.jpg?crop=1.00xw:1.00xh;0,0&resize=980:*">
+
+			<div class="son">
+				<h2>《光》特展5大亮點：當年的摩登女孩、重建臺灣百年藝術史……</h2>
+				<p>今年5月21日起，《光》將於高雄市立美術館盛大開展，邀請南臺灣民眾親炙黃土水雕塑作品〈甘露水〉以及其他超過20位臺灣前輩藝術家的大師之作，共同見證藝文界的百年脈動！</p>
+			</div>
+
+		</div>
+
+
+	</div>
+	</div>
+
+
+
+
+
+
+
+	<div class="footer">
+		<div>
+			<img src="./assets/icon/Logo-name.png">
+		</div>
+		<div class="credit">
+			<p>記者：ＡＡＡ</p>
+			<p>記者：ＡＡＡ</p>
+			<p>記者：ＡＡＡ</p>
+
+		</div>
+		<div class="credit" style="margin-left:40px">
+			<p>記者：ＡＡＡ</p>
+			<p>記者：ＡＡＡ</p>
+			<p>法賢：法法法</p>
+		</div>
+
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+		crossorigin="anonymous"></script>
+
+</body>
+
+</html>
